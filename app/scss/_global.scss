@@ -1,10 +1,28 @@
 body {
   background-color: #fff;
+  @extend %Rubik;
+  font-size: 12px;
   line-height: 1.2;
 }
 
-.container {
+.container-big {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.container-small {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--lg {
+    max-width: 1800px;
+  }
 }
