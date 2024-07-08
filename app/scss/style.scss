@@ -11,13 +11,14 @@
     justify-content: space-between;
     align-items: center;
     @extend %Rubik;
+    color: #436372;
   }
 
   &__logo {
     display: flex;
-    padding-right: 180px;
+    padding-right: 170px;
     font-size: 36px;
-    color: #69828e;
+    color: #436372;
   }
 
   &__logo span {
@@ -28,8 +29,8 @@
     display: flex;
   }
 
-  &__item+.header__item {
-    margin-left: 35px;
+  &__item:not(:last-child) {
+    margin-right: 35px;
   }
 
   &__link {
@@ -74,10 +75,6 @@
 
   &__library:hover {
     background-color: #869ca8;
-  }
-
-  &__wrapper {
-    display: flex;
   }
 
   &__cart,
@@ -147,6 +144,142 @@
     top: 9px;
     left: 89px;
     z-index: 2;
+  }
+
+
+}
+
+.main__block {
+  height: 20px;
+  background-color: #f7f2f2;
+}
+
+.footer {
+  font-size: 14px;
+
+  &__top {
+    padding: 80px 0;
+    display: flex;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 36px;
+    color: #436372;
+    margin-bottom: 24px;
+  }
+
+  &__logo span {
+    margin-left: 15px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contact,
+  &__services,
+  &__account {
+    width: 200px;
+    margin-right: 100px;
+  }
+
+  &__form {
+    width: 270px;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: #1f2044;
+    text-transform: uppercase;
+    margin: 15px 0 25px;
+  }
+
+  &__address,
+  &__phone {
+    margin-bottom: 16px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__link,
+  &__contact,
+  & p {
+    @extend %Rubik;
+  }
+
+  &__link {
+    transition: color 0.3s;
+  }
+
+  &__link:hover {
+    color: #1f2044;
+  }
+
+  &__input {
+    background-color: #fef7f0;
+    color: #6e8c9a;
+    max-width: 170px;
+    font-size: 12px;
+    font-weight: 200;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    margin-top: 40px;
+
+    &::placeholder {
+      color: #436372;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: #a3bbc8;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    transition: ackground-color 0.3s;
+  }
+
+  &__button:hover {
+    background-color: #869ca8;
+  }
+
+  &__bottom {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dae4e9;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__menu {
+    position: relative;
+  }
+
+  &__menu+.footer__menu {
+    margin-left: 28px;
+  }
+
+  &__menu:not(:last-child)::before {
+    content: "";
+    height: 17px;
+    width: 1px;
+    background-color: #7d7d7d;
+    position: absolute;
+    right: -14px;
+    top: 1px;
   }
 
 
