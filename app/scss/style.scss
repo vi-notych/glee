@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'vars';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -142,7 +143,6 @@
     }
   }
 }
-
 
 .main__block {
   height: 20px;
@@ -299,12 +299,81 @@
   }
 }
 
+.slider {
+  background-color: #fcd7b6;
 
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin: 225px 0 200px;
+    padding: 0 300px;
+    position: relative;
 
+    &::after {
+      content: '';
+      position: absolute;
+      width: 634px;
+      height: 634px;
+      border-radius: 50%;
+      right: 185px;
+      top: -120px;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      z-index: -1;
+    }
+  }
 
+  &__title {
+    @extend %Rubik;
+    color: #243f4d;
+    font-size: 72px;
+    line-height: 1;
+    max-width: 450px;
+    margin-bottom: 25px;
+  }
 
+  &__text {
+    @extend %Rubik;
+    font-size: 18px;
+    max-width: 370px;
+    margin-bottom: 45px;
+  }
 
+  &__link {
+    @extend %btn;
+    transition: background-color 0.3s;
 
+    &:hover {
+      background-color: #869ca8;
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 45px;
+
+  li {
+    padding: 0 5px;
+
+    button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      color: #667983;
+      background-color: #fde3cc;
+      cursor: pointer;
+      transition: background-color, color 0.3s;
+    }
+
+    &.slick-active button {
+      background-color: #fff;
+      color: #243f4d;
+    }
+  }
+}
 
 
 
