@@ -19,10 +19,10 @@
     padding-right: 170px;
     font-size: 36px;
     color: #436372;
-  }
 
-  &__logo span {
-    margin-left: 15px;
+    span {
+      margin-left: 15px;
+    }
   }
 
   &__list {
@@ -36,11 +36,13 @@
   &__link {
     font-size: 15px;
     color: #69828e;
-    transition: all 0.3s;
-  }
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
 
-  &__link:hover {
-    border-bottom: 1px solid #69828e;
+    &:hover {
+      border-color: #69828e;
+    }
+
   }
 
   &__btn {
@@ -61,20 +63,20 @@
     background-color: #edf1f4;
     margin-right: 20px;
     transition: background-color 0.3s;
-  }
 
-  &__search:hover {
-    background-color: #c0c4c8;
+    &:hover {
+      background-color: #c0c4c8;
+    }
   }
 
   &__library {
     background-color: #a3bbc8;
     margin-left: 20px;
     transition: background-color 0.3s;
-  }
 
-  &__library:hover {
-    background-color: #869ca8;
+    &:hover {
+      background-color: #869ca8;
+    }
   }
 
   &__cart,
@@ -88,66 +90,59 @@
     padding-top: 5px;
     position: relative;
     transition: background-color 0.3s;
-  }
 
-  &__cart:hover {
-    background-color: #d7b597;
-  }
+    &:hover {
+      background-color: #d7b597;
+    }
 
-  &__heart:hover {
-    background-color: #d7b597;
+    & span {
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      @extend %DMSans;
+      font-size: 10px;
+      color: #6d7f88;
+      top: 10px;
+    }
   }
 
   &__cart {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     padding-right: 10px;
+
+    & span {
+      right: 32px;
+    }
   }
 
   &__heart {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     padding-left: 10px;
+
+    & span {
+      right: 18px;
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 30px;
+      background-color: #fde7d3;
+      position: absolute;
+      top: 9px;
+      right: -0.5px;
+      z-index: 2;
+    }
   }
-
-  &__cart span,
-  &__heart span {
-    position: absolute;
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    @extend %DMSans;
-    font-size: 10px;
-    color: #6d7f88;
-  }
-
-  &__cart span {
-    top: 10px;
-    right: 32px;
-  }
-
-  &__heart span {
-    top: 10px;
-    right: 18px;
-  }
-
-  &__heart::after {
-    content: "";
-    width: 2px;
-    height: 30px;
-    background-color: #fde7d3;
-    position: absolute;
-    top: 9px;
-    left: 89px;
-    z-index: 2;
-  }
-
-
 }
+
 
 .main__block {
   height: 20px;
@@ -169,10 +164,11 @@
     font-size: 36px;
     color: #436372;
     margin-bottom: 24px;
-  }
 
-  &__logo span {
-    margin-left: 15px;
+    span {
+      margin-left: 15px;
+    }
+
   }
 
   &__contact {
@@ -187,7 +183,7 @@
     margin-right: 100px;
   }
 
-  &__form {
+  &__newsletter {
     width: 270px;
   }
 
@@ -195,12 +191,26 @@
     font-size: 16px;
     color: #1f2044;
     text-transform: uppercase;
-    margin: 15px 0 25px;
+    margin: 20px 0 25px;
   }
 
   &__address,
   &__phone {
     margin-bottom: 16px;
+  }
+
+  &__address,
+  &__phone,
+  &__email {
+    transition: color 0.3s;
+
+    & span {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: #1f2044
+    }
   }
 
   &__item:not(:last-child) {
@@ -209,21 +219,27 @@
 
   &__link,
   &__contact,
-  & p {
+  &__text {
     @extend %Rubik;
   }
 
   &__link {
     transition: color 0.3s;
+
+    &:hover {
+      color: #1f2044;
+    }
   }
 
-  &__link:hover {
-    color: #1f2044;
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
   &__input {
     background-color: #fef7f0;
-    color: #6e8c9a;
+    color: #17262d;
     max-width: 170px;
     font-size: 12px;
     font-weight: 200;
@@ -239,17 +255,18 @@
 
   &__button {
     border: none;
+    width: 100px;
     background-color: #a3bbc8;
     font-size: 12px;
     font-weight: 200;
     color: #fff;
     padding: 15px;
     cursor: pointer;
-    transition: ackground-color 0.3s;
-  }
+    transition: background-color 0.3s;
 
-  &__button:hover {
-    background-color: #869ca8;
+    &:hover {
+      background-color: #869ca8;
+    }
   }
 
   &__bottom {
@@ -268,8 +285,8 @@
     position: relative;
   }
 
-  &__menu+.footer__menu {
-    margin-left: 28px;
+  &__menu:not(:last-child) {
+    margin-right: 28px;
   }
 
   &__menu:not(:last-child)::before {
@@ -279,10 +296,7 @@
     background-color: #7d7d7d;
     position: absolute;
     right: -14px;
-    top: 1px;
   }
-
-
 }
 
 
