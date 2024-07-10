@@ -9,10 +9,9 @@
 }
 
 %btn {
-  width: 200px;
-  height: 65px;
+  max-width: 200px;
   background-color: #a3bbc8;
-  padding: 0 20px 0 30px;
+  padding: 24px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

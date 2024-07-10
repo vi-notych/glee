@@ -281,15 +281,15 @@
     display: flex;
   }
 
-  &__menu {
+  &__bottom &__item {
     position: relative;
   }
 
-  &__menu:not(:last-child) {
+  &__bottom &__item:not(:last-child) {
     margin-right: 28px;
   }
 
-  &__menu:not(:last-child)::before {
+  &__bottom &__item:not(:last-child)::before {
     content: "";
     height: 17px;
     width: 1px;
@@ -323,12 +323,15 @@
     }
   }
 
+  &__content {
+    max-width: 450px;
+  }
+
   &__title {
     @extend %Rubik;
     color: #243f4d;
     font-size: 72px;
     line-height: 1;
-    max-width: 450px;
     margin-bottom: 25px;
   }
 
@@ -365,7 +368,11 @@
       color: #667983;
       background-color: #fde3cc;
       cursor: pointer;
-      transition: background-color, color 0.3s;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #fff;
+      }
     }
 
     &.slick-active button {
