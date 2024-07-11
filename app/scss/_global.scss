@@ -26,3 +26,11 @@ body {
     max-width: 1800px;
   }
 }
+
+.title {
+  text-align: center;
+  @extend %DMSans;
+  font-size: 36px;
+  color: $title;
+  margin-bottom: 40px;
+}
