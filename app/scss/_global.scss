@@ -34,3 +34,17 @@ body {
   color: $title;
   margin-bottom: 40px;
 }
+
+.btn {
+  max-width: 200px;
+  width: 100%;
+  background-color: #a3bbc8;
+  padding: 24px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %Rubik;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}

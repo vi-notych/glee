@@ -344,8 +344,7 @@
     margin-bottom: 45px;
   }
 
-  &__link {
-    @extend %btn;
+  &__button {
     transition: background-color 0.3s;
 
     &:hover {
@@ -385,9 +384,6 @@
 
 }
 
-
-
-
 .features {
   &__info {
     display: flex;
@@ -405,6 +401,18 @@
     &:not(:first-child) {
       border-left: 1px solid #e8e4df;
     }
+
+    &:nth-child(1) .features__subtitle::before {
+      content: url('../images/content/products/support.png');
+    }
+
+    &:nth-child(2) .features__subtitle::before {
+      content: url('../images/content/products/delivery.png');
+    }
+
+    &:nth-child(3) .features__subtitle::before {
+      content: url('../images/content/products/payment.png');
+    }
   }
 
   &__subtitle {
@@ -417,18 +425,6 @@
       position: absolute;
       top: 0;
       left: -75px;
-    }
-
-    .features__item:nth-child(1) &::before {
-      content: url('../images/content/products/support.png');
-    }
-
-    .features__item:nth-child(2) &::before {
-      content: url('../images/content/products/delivery.png');
-    }
-
-    .features__item:nth-child(3) &::before {
-      content: url('../images/content/products/payment.png');
     }
   }
 }
@@ -448,8 +444,8 @@
 
   .button {
     color: #7d7d7d;
-    cursor: pointer;
     transition: color 0.3s;
+    cursor: pointer;
 
     &:hover {
       color: $title;
@@ -476,6 +472,7 @@
     grid-column-gap: 30px;
     grid-row-gap: 40px;
     padding: 30px 30px;
+    margin-bottom: 190px;
   }
 
   &__item {
@@ -488,12 +485,28 @@
     justify-content: flex-end;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.1);
     cursor: pointer;
+    position: relative;
   }
 
   &__item:hover &__zoom,
   &__item:hover &__favourite,
   &__item:hover &__cart {
     opacity: 1;
+  }
+
+  &__img {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__wrapper {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+
   }
 
   &__name {
@@ -542,6 +555,71 @@
     }
   }
 }
+
+.lamp {
+  &__inner {
+    display: flex;
+
+    &:nth-child(1) .lamp__item::before {
+      content: url('../images/content/lamp_1.png');
+    }
+
+    &:nth-child(2) .lamp__item::before {
+      content: url('../images/content/lamp_2.png');
+    }
+  }
+
+  &__item {
+    background-color: #feefe2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 140px 90px 390px;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    &::before {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      bottom: 90px;
+      left: 145px;
+    }
+
+  }
+
+  &__subtitle {
+    font-size: 26px;
+    color: #243f4d;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @extend %Rubik;
+    color: #243f4d;
+    //padding-bottom: 35px;
+  }
+
+  &__button {
+    width: 200px;
+    color: #436372;
+    background-color: transparent;
+    border: 1px solid #b3b7b5;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+
+    &:hover {
+      background-color: #edddce;
+    }
+  }
+}
+
+
 
 
 

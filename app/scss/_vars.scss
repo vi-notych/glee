@@ -10,14 +10,11 @@ $title: #191919;
   font-weight: 500;
 }
 
-%btn {
-  max-width: 200px;
-  background-color: #a3bbc8;
-  padding: 24px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @extend %Rubik;
-  color: #fff;
-  font-size: 15px;
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{a}x(#{$numbers});
 }
