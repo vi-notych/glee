@@ -147,25 +147,25 @@
           <h3 class="title">
             Products of the week
           </h3>
-          <ul class="products__tabs">
-            <li class="products__tab">
-              <button class="button">All</button>
+          <ul class="tabs">
+            <li class="tab">
+              <button class="button" data-filter="all">All</button>
             </li>
-            <li class="products__tab">
-              <button class="button">Furnitures</button>
+            <li class="tab">
+              <button class="button" data-filter=".category-furnitures">Furnitures</button>
             </li>
-            <li class="products__tab">
-              <button class="button">Chairs</button>
+            <li class="tab">
+              <button class="button" data-filter=".category-chairs">Chairs</button>
             </li>
-            <li class="products__tab">
-              <button class="button">Lighting</button>
+            <li class="tab">
+              <button class="button" data-filter=".category-lighting">Lighting</button>
             </li>
-            <li class="products__tab">
-              <button class="button">Decor</button>
+            <li class="tab">
+              <button class="button" data-filter=".category-decor">Decor</button>
             </li>
           </ul>
           <div class="products__items">
-            <a class="products__item" href="#">
+            <a class="products__item mix category-furnitures" href="#">
               <div class="products__img">
                 <img src="images/content/products/wooden_radio.jpg" alt="">
               </div>
@@ -195,7 +195,7 @@
               <p class="products__name">Wooden radio</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item" href="#">
+            <a class="products__item mix category-decor" href="#">
               <div class="products__img">
                 <img src="images/content/products/wooden_chair.jpg" alt="">
               </div>
@@ -225,7 +225,7 @@
               <p class="products__name">Wooden chair</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item" href="#">
+            <a class="products__item mix category-lighting" href="#">
               <div class="products__img">
                 <img src="images/content/products/white_chair.jpg" alt="">
               </div>
@@ -255,7 +255,7 @@
               <p class="products__name">White chair</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item" href="#">
+            <a class="products__item mix category-decor" href="#">
               <div class="products__img">
                 <img src="images/content/products/retro_table.jpg" alt="">
               </div>
@@ -285,7 +285,7 @@
               <p class="products__name">Retro table</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item" href="#">
+            <a class="products__item category-furnitures" href="#">
               <div class="products__img">
                 <img src="images/content/products/wooden_radio_2.jpg" alt="">
               </div>
@@ -315,7 +315,7 @@
               <p class="products__name">Wooden radio</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item" href="#">
+            <a class="products__item mix category-lighting" href="#">
               <div class="products__img">
                 <img src="images/content/products/wooden_chair_2.jpg" alt="">
               </div>
@@ -345,7 +345,7 @@
               <p class="products__name">Wooden chair</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item" href="#">
+            <a class="products__item mix category-decor" href="#">
               <div class="products__img">
                 <img src="images/content/products/white_chair_2.jpg" alt="">
               </div>
@@ -375,7 +375,7 @@
               <p class="products__name">White chair</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item" href="#">
+            <a class="products__item mix category-chairs" href="#">
               <div class="products__img">
                 <img src="images/content/products/retro_table_2.jpg" alt="">
               </div>
@@ -413,6 +413,7 @@
       <div class="container container--lg">
         <div class="lamp__inner">
           <div class="lamp__item">
+            <img class="lamp__img" src="../images/content/lamp_1.png" alt="lamp1">
             <h4 class="lamp__subtitle">Mirum Notare Tellus</h4>
             <p class="lamp__text">
               LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
@@ -423,6 +424,7 @@
             </button>
           </div>
           <div class="lamp__item">
+            <img class="lamp__img" src="../images/content/lamp_2.png" alt="lamp2">
             <h4 class="lamp__subtitle">Malesuada Tempor
               Euismod</h4>
             <p class="lamp__text">
@@ -436,6 +438,101 @@
         </div>
       </div>
     </section>
+    <section class="newdesigne">
+      <div class="container">
+        <div class="newdesigne__menu">
+          <h4 class="title">
+            New Design
+          </h4>
+          <ul class="tabs">
+            <li class="tab">
+              <button class="button" data-filter="all">All</button>
+            </li>
+            <li class="tab">
+              <button class="button" data-filter=".category-furnitures">Furnitures</button>
+            </li>
+            <li class="tab">
+              <button class="button" data-filter=".category-chairs">Chairs</button>
+            </li>
+            <li class="tab">
+              <button class="button" data-filter=".category-lighting">Lighting</button>
+            </li>
+            <li class="tab">
+              <button class="button" data-filter=".category-decor">Decor</button>
+            </li>
+          </ul>
+          <div class="newdesigne__items">
+            <div class="newdesigne__item mix category-furnitures">
+              <div class="newdesigne__subtitle">
+                Beat Flat Pendant
+                Black
+              </div>
+              <div class="newdesigne__text">Classic</div>
+              <img src="images/content/newdesign/foto_1.jpg" alt="foto1">
+            </div>
+            <div class="newdesigne__item mix category-decor">
+              <div class="newdesigne__subtitle">
+                Lampe Sur Pieds
+                Bamboo
+              </div>
+              <div class="newdesigne__text">
+                Classic
+              </div>
+              <img src="images/content/newdesign/foto_2.jpg" alt="foto2">
+            </div>
+            <div class="newdesigne__item mix category-lighting">
+              <div class="newdesigne__subtitle">
+                Rattan Rocking
+                Chair
+              </div>
+              <div class="newdesigne__text">
+                Classic
+              </div>
+              <img style="margin: 0 50px 50px 0;" src="images/content/newdesign/foto_3.png" alt="foto3">
+            </div>
+            <div class="newdesigne__item mix category-decor">
+              <div class="newdesigne__subtitle">
+                Rattan Rocking
+                Chair
+              </div>
+              <div class="newdesigne__text">
+                Classic
+              </div>
+              <img src="images/content/newdesign/foto_4.jpg" alt="foto4">
+            </div>
+            <div class="newdesigne__item mix category-chairs">
+              <div class="newdesigne__subtitle">
+                Rattan Rocking
+                Chair
+              </div>
+              <div class="newdesigne__text">
+                Classic
+              </div>
+              <img style="margin: 0 20px 20px 0;" src="images/content/newdesign/foto_5.png" alt="foto5">
+            </div>
+            <div class="newdesigne__item mix category-furnitures">
+              <div class="newdesigne__subtitle">
+                Lampe Sur Pieds
+                Bamboo
+              </div>
+              <div class="newdesigne__text">
+                Classic
+              </div>
+              <img src="images/content/newdesign/foto_6.jpg" alt="foto6">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="video">
+      <div class="video__popup" style="background-image: url('images/video-img.jpg');">
+        <a data-fansybox href="https://youtu.be/pxvrvH3IkSw?si=y6C4ukSekYtSSl__">
+          <img src="images/video-btn.png" alt="video-btn">
+        </a>
+      </div>
+    </section>
+
 
 
 
@@ -529,7 +626,7 @@
 
 
 
-
+  <script src="js/mixitup.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
