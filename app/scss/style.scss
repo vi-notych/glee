@@ -428,16 +428,16 @@
     &:not(:last-child) {
       margin-right: 30px;
     }
-  }
 
-  &__button {
-    color: #7d7d7d;
-    transition: color 0.3s;
-    cursor: pointer;
+    button {
+      color: #7d7d7d;
+      transition: color 0.3s;
+      cursor: pointer;
 
-    &:hover,
-    &.mixitup-control-active {
-      color: $title;
+      &:hover,
+      &.mixitup-control-active {
+        color: $title;
+      }
     }
   }
 
