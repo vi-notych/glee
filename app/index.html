@@ -142,26 +142,27 @@
       </div>
     </section>
     <section class="products">
-      <div class="container container--lg">
-        <div class="products__week">
-          <h3 class="title">
-            Products of the week
-          </h3>
-          <ul class="tabs">
-            <li class="tab">
-              <button class="button" data-filter="all">All</button>
+      <div class="container">
+
+        <h3 class="title">
+          Products of the week
+        </h3>
+        <div data-ref="container-1">
+          <ul class="products__tabs">
+            <li class="products__tab">
+              <button class="products__button" data-filter="all">All</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-furnitures">Furnitures</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-furnitures">Furnitures</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-chairs">Chairs</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-chairs">Chairs</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-lighting">Lighting</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-lighting">Lighting</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-decor">Decor</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-decor">Decor</button>
             </li>
           </ul>
           <div class="products__items">
@@ -285,7 +286,7 @@
               <p class="products__name">Retro table</p>
               <p class="products__price">$29.00</p>
             </a>
-            <a class="products__item category-furnitures" href="#">
+            <a class="products__item mix category-furnitures" href="#">
               <div class="products__img">
                 <img src="images/content/products/wooden_radio_2.jpg" alt="">
               </div>
@@ -407,30 +408,31 @@
             </a>
           </div>
         </div>
+
       </div>
     </section>
-    <section class="lamp">
+    <section class="offers">
       <div class="container container--lg">
-        <div class="lamp__inner">
-          <div class="lamp__item">
-            <img class="lamp__img" src="../images/content/lamp_1.png" alt="lamp1">
-            <h4 class="lamp__subtitle">Mirum Notare Tellus</h4>
-            <p class="lamp__text">
-              LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+        <div class="offers__inner">
+          <div class="offers__item">
+            <img class="offers__img" src="../images/content/lamp_1.png" alt="offers1">
+            <h4 class="offers__name">Mirum Notare Tellus</h4>
+            <p class="offers__text">
+              LEDCornBulb offers 5W 7W 10W 12W 15W E26 E27LEDCornLight
             </p>
-            <button class="lamp__button btn">
+            <button class="offers__button btn">
               View More
               <img src="images/arrow2.png" alt="arrow">
             </button>
           </div>
-          <div class="lamp__item">
-            <img class="lamp__img" src="../images/content/lamp_2.png" alt="lamp2">
-            <h4 class="lamp__subtitle">Malesuada Tempor
+          <div class="offers__item">
+            <img class="offers__img" src="../images/content/lamp_2.png" alt="offers2">
+            <h4 class="offers__name">Malesuada Tempor
               Euismod</h4>
-            <p class="lamp__text">
+            <p class="offers__text">
               50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
             </p>
-            <button class="lamp__button btn">
+            <button class="offers__button btn">
               View More
               <img src="images/arrow2.png" alt="arrow">
             </button>
@@ -438,97 +440,99 @@
         </div>
       </div>
     </section>
-    <section class="newdesigne">
+    <section class="products">
       <div class="container">
-        <div class="newdesigne__menu">
-          <h4 class="title">
-            New Design
-          </h4>
-          <ul class="tabs">
-            <li class="tab">
-              <button class="button" data-filter="all">All</button>
+        <h4 class="title">
+          New Design
+        </h4>
+        <div data-ref="container-2">
+          <ul class="products__tabs">
+            <li class="products__tab">
+              <button class="products__button" data-filter="all">All</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-furnitures">Furnitures</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-furnitures">Furnitures</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-chairs">Chairs</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-chairs">Chairs</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-lighting">Lighting</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-lighting">Lighting</button>
             </li>
-            <li class="tab">
-              <button class="button" data-filter=".category-decor">Decor</button>
+            <li class="products__tab">
+              <button class="products__button" data-filter=".category-decor">Decor</button>
             </li>
           </ul>
-          <div class="newdesigne__items">
-            <div class="newdesigne__item mix category-furnitures">
-              <div class="newdesigne__subtitle">
+          <div class="products__blocks">
+            <a class="products__block mix category-furnitures" href="#">
+              <div class="products__subtitle">
                 Beat Flat Pendant
                 Black
               </div>
-              <div class="newdesigne__text">Classic</div>
-              <img src="images/content/newdesign/foto_1.jpg" alt="foto1">
-            </div>
-            <div class="newdesigne__item mix category-decor">
-              <div class="newdesigne__subtitle">
-                Lampe Sur Pieds
+              <div class="products__text">Classic</div>
+              <img class="products__carts" src="images/content/newdesign/product_1.png" alt="product1">
+            </a>
+            <a class="products__block mix category-decor" href="#">
+              <div class="products__subtitle">
+                offerse Sur Pieds
                 Bamboo
               </div>
-              <div class="newdesigne__text">
+              <div class="products__text">
                 Classic
               </div>
-              <img src="images/content/newdesign/foto_2.jpg" alt="foto2">
-            </div>
-            <div class="newdesigne__item mix category-lighting">
-              <div class="newdesigne__subtitle">
+              <img class="products__carts" src="images/content/newdesign/product_2.png" alt="product2">
+            </a>
+            <a class="products__block mix category-lighting" href="#">
+              <div class="products__subtitle">
                 Rattan Rocking
                 Chair
               </div>
-              <div class="newdesigne__text">
+              <div class="products__text">
                 Classic
               </div>
-              <img style="margin: 0 50px 50px 0;" src="images/content/newdesign/foto_3.png" alt="foto3">
-            </div>
-            <div class="newdesigne__item mix category-decor">
-              <div class="newdesigne__subtitle">
+              <img class="products__carts" style="padding: 0 50px 50px 0;" src="images/content/newdesign/product_3.png"
+                alt="product3">
+            </a>
+            <a class="products__block mix category-decor" href="#">
+              <div class="products__subtitle">
                 Rattan Rocking
                 Chair
               </div>
-              <div class="newdesigne__text">
+              <div class="products__text">
                 Classic
               </div>
-              <img src="images/content/newdesign/foto_4.jpg" alt="foto4">
-            </div>
-            <div class="newdesigne__item mix category-chairs">
-              <div class="newdesigne__subtitle">
+              <img class="products__carts" src="images/content/newdesign/product_4.png" alt="product4">
+            </a>
+            <a class="products__block mix category-chairs" href="#">
+              <div class="products__subtitle">
                 Rattan Rocking
                 Chair
               </div>
-              <div class="newdesigne__text">
+              <div class="products__text">
                 Classic
               </div>
-              <img style="margin: 0 20px 20px 0;" src="images/content/newdesign/foto_5.png" alt="foto5">
-            </div>
-            <div class="newdesigne__item mix category-furnitures">
-              <div class="newdesigne__subtitle">
-                Lampe Sur Pieds
+              <img class="products__carts" style="padding: 0 20px 20px 0;" src="images/content/newdesign/product_5.png"
+                alt="product5">
+            </a>
+            <a class="products__block mix category-furnitures" href="#">
+              <div class="products__subtitle">
+                offerse Sur Pieds
                 Bamboo
               </div>
-              <div class="newdesigne__text">
+              <div class="products__text">
                 Classic
               </div>
-              <img src="images/content/newdesign/foto_6.jpg" alt="foto6">
-            </div>
+              <img class="products__carts" src="images/content/newdesign/product_6.png" alt="product6">
+            </a>
           </div>
         </div>
       </div>
       </div>
     </section>
     <section class="video">
-      <div class="video__popup" style="background-image: url('images/video-img.jpg');">
-        <a data-fansybox href="https://youtu.be/pxvrvH3IkSw?si=y6C4ukSekYtSSl__">
-          <img src="images/video-btn.png" alt="video-btn">
+      <div class="video__inner" style="background-image: url('images/video-img.jpg');">
+        <a class="video__play-btn" data-fancybox href="https://www.youtube.com/watch?v=z2X2HaTvkl8">
+          <img src="images/video-btn.svg" alt="video-btn">
         </a>
       </div>
     </section>
@@ -631,3 +635,23 @@
 </body>
 
 </html>
+
+
+
+<section>
+  <div>
+    <span></span>
+  </div>
+  <div>
+    <span></span>
+  </div>
+  <div>
+    <span></span>
+  </div>
+</section>
+
+<section>
+  <span></span>
+  <span></span>
+  <span></span>
+</section>

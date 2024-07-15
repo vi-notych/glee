@@ -71,12 +71,12 @@
   }
 
   &__library {
-    background-color: #a3bbc8;
+    background-color: $gray;
     margin-left: 20px;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #869ca8;
+      background-color: $gray-hover;
     }
   }
 
@@ -87,13 +87,13 @@
     align-items: center;
     height: 50px;
     width: 90px;
-    background-color: #fcd7b6;
+    background-color: $orange;
     padding-top: 5px;
     position: relative;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #d7b597;
+      background-color: $orange-hover;
     }
 
     & span {
@@ -142,11 +142,6 @@
       z-index: 2;
     }
   }
-}
-
-.main__block {
-  height: 20px;
-  background-color: #f7f2f2;
 }
 
 .footer {
@@ -301,7 +296,7 @@
 
 .slider {
   &__inner {
-    background-color: #fcd7b6;
+    background-color: $orange;
   }
 
   &__item {
@@ -342,14 +337,6 @@
     font-size: 18px;
     max-width: 370px;
     margin-bottom: 45px;
-  }
-
-  &__button {
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #869ca8;
-    }
   }
 
   .slick-dots {
@@ -403,15 +390,15 @@
     }
 
     &:nth-child(1) .features__subtitle::before {
-      content: url('../images/content/products/support.png');
+      content: url('../images/icon/support.png');
     }
 
     &:nth-child(2) .features__subtitle::before {
-      content: url('../images/content/products/delivery.png');
+      content: url('../images/icon/delivery.png');
     }
 
     &:nth-child(3) .features__subtitle::before {
-      content: url('../images/content/products/payment.png');
+      content: url('../images/icon/payment.png');
     }
   }
 
@@ -431,29 +418,41 @@
 
 .products {
 
-  &__text {
-    color: #888888;
-    line-height: 27px;
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
   }
 
-  &__week {
-    max-width: 1230px;
-    margin-left: auto;
-    margin-right: auto;
+  &__tab {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__button {
+    color: #7d7d7d;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &.mixitup-control-active {
+      color: $title;
+    }
   }
 
   &__items {
-    display: grid;
-    min-height: 860px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 40px;
-    padding: 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 40px;
     margin-bottom: 190px;
   }
 
   &__item {
+    height: 380px;
+    max-width: 270px;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center 50px;
     background-color: #fff;
@@ -528,112 +527,33 @@
       background-color: #a3bbc8;
 
       path {
-        fill: #fff
+        fill: #fff;
       }
     }
   }
-}
 
-.lamp {
-  &__inner {
-    display: flex;
-
-    /*&:nth-child(1) .lamp__item::before {
-      content: url('../images/content/lamp_1.png');
-    }
-
-    &:nth-child(2) .lamp__item::before {
-      content: url('../images/content/lamp_2.png');
-    }*/
-  }
-
-  &__item {
-    background-color: #feefe2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 90px 140px 90px 390px;
-    position: relative;
-    margin-bottom: 110px;
-    position: relative;
-
-    &:not(:first-child) {
-      margin-left: 30px;
-    }
-
-    &::before {
-      background-repeat: no-repeat;
-      background-size: 100%;
-      position: absolute;
-      bottom: 90px;
-      left: 145px;
-    }
-  }
-
-  &__img {
-    position: absolute;
-    left: 140px;
-    bottom: 90px;
-  }
-
-  &__subtitle {
-    font-size: 26px;
-    color: #243f4d;
-    margin-bottom: 15px;
-  }
-
-  &__text {
-    @extend %Rubik;
-    color: #243f4d;
-  }
-
-  &__button {
-    width: 200px;
-    color: #436372;
-    background-color: transparent;
-    border: 1px solid #b3b7b5;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    margin-top: 25px;
-
-    &:hover {
-      background-color: #edddce;
-    }
-  }
-}
-
-.newdesigne {
-  &__tabs {
-    margin-bottom: 80px;
-  }
-
-  /*&__items {
-    display: grid;
-    min-height: 525px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 35px;
-    margin-bottom: 120px;
-  }*/
-
-  &__items {
+  &__blocks {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 120px;
   }
 
-  &__item {
+  &__block {
     max-width: 370px;
     width: 100%;
     height: 245px;
     background-color: #f8f8f8;
     padding: 40px 0 0 35px;
     position: relative;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e8e4e4;
+    }
   }
 
-  img {
+  &__carts {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -655,15 +575,99 @@
   }
 }
 
+.offers {
+  &__inner {
+    display: flex;
+
+  }
+
+
+  &__item {
+    background-color: #feefe2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 140px 90px 390px;
+    position: relative;
+    margin-bottom: 110px;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 140px;
+    bottom: 90px;
+  }
+
+  &__name {
+    font-size: 26px;
+    color: #243f4d;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @extend %Rubik;
+    color: #243f4d;
+  }
+
+  &__button {
+    color: #436372;
+    background-color: transparent;
+    border: 1px solid #b3b7b5;
+    border-radius: 4px;
+    margin-top: 25px;
+
+    &:hover {
+      background-color: #edddce;
+    }
+  }
+}
+
 .video {
 
-  &__popup {
+  &__inner {
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  &__play-btn {
+    position: relative;
+    z-index: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background-color: #a3bbc8;
+      opacity: 0.4;
+      z-index: -1;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0.6;
+        background-color: #da9c6d;
+      }
+    }
+  }
 }
+
+
+
+
+
 
 
 
