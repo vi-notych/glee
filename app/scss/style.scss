@@ -197,6 +197,7 @@
   &__address,
   &__phone,
   &__email {
+
     transition: color 0.3s;
 
     & span {
@@ -212,9 +213,10 @@
     margin-bottom: 16px;
   }
 
-  &__link,
+  &__list,
   &__contact,
-  &__text {
+  &__text,
+  &__bottom {
     @extend %Rubik;
   }
 
@@ -635,6 +637,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 125px;
   }
 
   &__play-btn {
@@ -662,6 +665,110 @@
       }
     }
   }
+}
+
+.articles {
+  &artocles__top {
+    background-color: #fff;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      @extend %DMSans;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: color;
+
+      &:hover {
+        color: #696868;
+      }
+    }
+  }
+
+  &__photo {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    background-color: #fef7f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__items {
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__item {
+    max-width: 370px;
+    background-color: #fff;
+    color: #262626;
+    padding: 35px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  button {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: $gray;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $gray-hover;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  &__info {
+    padding-top: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__data {
+    margin-right: 20px;
+  }
+
+  &__partners {
+    height: 265px;
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+
 }
 
 
