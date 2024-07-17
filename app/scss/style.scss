@@ -12,14 +12,14 @@
     justify-content: space-between;
     align-items: center;
     @extend %Rubik;
-    color: #436372;
+    color: $logo;
   }
 
   &__logo {
     display: flex;
     padding-right: 170px;
     font-size: 36px;
-    color: #436372;
+    color: $logo;
 
     span {
       margin-left: 15px;
@@ -157,7 +157,7 @@
     flex-direction: row;
     align-items: center;
     font-size: 36px;
-    color: #436372;
+    color: $logo;
     margin-bottom: 24px;
 
     span {
@@ -235,7 +235,7 @@
   }
 
   &__input {
-    background-color: #fef7f0;
+    background-color: $yellow;
     color: #17262d;
     max-width: 170px;
     font-size: 12px;
@@ -246,14 +246,14 @@
     margin-top: 40px;
 
     &::placeholder {
-      color: #436372;
+      color: $logo;
     }
   }
 
   &__button {
     border: none;
     width: 100px;
-    background-color: #a3bbc8;
+    background-color: $gray;
     font-size: 12px;
     font-weight: 200;
     color: #fff;
@@ -262,7 +262,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #869ca8;
+      background-color: $gray-hover;
     }
   }
 
@@ -290,7 +290,7 @@
     content: "";
     height: 17px;
     width: 1px;
-    background-color: #7d7d7d;
+    background-color: $global;
     position: absolute;
     right: -14px;
   }
@@ -328,7 +328,7 @@
 
   &__title {
     @extend %Rubik;
-    color: #243f4d;
+    color: $dark-grey;
     font-size: 72px;
     line-height: 1;
     margin-bottom: 25px;
@@ -366,7 +366,7 @@
 
       &.slick-active button {
         background-color: #fff;
-        color: #243f4d;
+        color: $dark-grey;
       }
     }
   }
@@ -377,7 +377,7 @@
   &__info {
     display: flex;
     margin-bottom: 75px;
-    background-color: #fef7f0;
+    background-color: $beige;
   }
 
   &__item {
@@ -432,7 +432,7 @@
     }
 
     button {
-      color: #7d7d7d;
+      color: $global;
       transition: color 0.3s;
       cursor: pointer;
 
@@ -489,11 +489,11 @@
   }
 
   &__name {
-    color: #243f4d;
+    color: $dark-grey;
   }
 
   &__price {
-    color: #a3bbc8;
+    color: $blue;
     margin: 10px 0 25px;
   }
 
@@ -512,7 +512,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fef7f0;
+    background-color: $yellow;
     transition: background-color 0.3s, opacity 0.3s;
     cursor: pointer;
     opacity: 0;
@@ -526,7 +526,7 @@
     }
 
     &:hover {
-      background-color: #a3bbc8;
+      background-color: $blue;
 
       path {
         fill: #fff;
@@ -571,7 +571,7 @@
   }
 
   &__text {
-    color: #a3bbc8;
+    color: $blue;
     position: relative;
     z-index: 4;
   }
@@ -608,17 +608,17 @@
 
   &__name {
     font-size: 26px;
-    color: #243f4d;
+    color: $dark-grey;
     margin-bottom: 15px;
   }
 
   &__text {
     @extend %Rubik;
-    color: #243f4d;
+    color: $dark-grey;
   }
 
   &__button {
-    color: #436372;
+    color: $logo;
     background-color: transparent;
     border: 1px solid #b3b7b5;
     border-radius: 4px;
@@ -640,7 +640,7 @@
     margin-bottom: 125px;
   }
 
-  &__play-btn {
+  &__play {
     position: relative;
     z-index: 0;
 
@@ -652,53 +652,23 @@
       width: 130px;
       height: 130px;
       border-radius: 50%;
-      background-color: #a3bbc8;
+      background-color: $blue;
       opacity: 0.4;
       z-index: -1;
-      transition: all 0.3s;
+      transition: opacity 0.3s;
     }
 
-    &:hover {
-      &::after {
-        opacity: 0.6;
-        background-color: #da9c6d;
-      }
+    &:hover::after {
+      opacity: 0.6;
     }
   }
 }
 
 .articles {
-  &artocles__top {
-    background-color: #fff;
-  }
 
   .title {
     display: flex;
     justify-content: space-between;
-
-    a {
-      @extend %DMSans;
-      font-size: 16px;
-      margin-right: 10px;
-      transition: color;
-
-      &:hover {
-        color: #696868;
-      }
-    }
-  }
-
-  &__photo {
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__bottom {
-    background-color: #fef7f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__items {
@@ -706,20 +676,54 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    position: relative;
   }
 
   &__item {
     max-width: 370px;
     background-color: #fff;
     color: #262626;
-    padding: 35px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
+    }
   }
 
-  button {
+  &__all {
+    @extend %DMSans;
+    font-size: 16px;
+    color: $title;
+    margin-right: 10px;
+    transition: color;
+    position: absolute;
+    top: -62px;
+    right: -8px;
+
+    svg {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: #696868;
+
+      path {
+        fill: #696868;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    position: absolute;
+    top: 235px;
+    left: 30px;
+  }
+
+  &__tag {
     width: 100px;
     height: 30px;
     border-radius: 15px;
@@ -729,20 +733,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: -15px;
-    left: 30px;
-    transition: background-color 0.3s;
-    cursor: pointer;
+  }
 
-    &:hover {
-      background-color: $gray-hover;
-    }
+  &__wrapper {
+    padding: 35px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 170px;
+    height: 100%;
   }
 
   &__name {
     font-size: 18px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 
   &__info {
@@ -757,18 +761,32 @@
   &__data {
     margin-right: 20px;
   }
+}
 
-  &__partners {
-    height: 265px;
-    max-width: 1170px;
+.partners {
+  background-color: $beige;
+  text-align: -webkit-center;
+  position: relative;
+
+  &::before {
+    content: '';
+    height: 170px;
     width: 100%;
+    background-color: $beige;
+    position: absolute;
+    top: -170px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__items {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 1170px;
+    padding: 90px 0;
+
   }
-
-
-
 }
 
 
