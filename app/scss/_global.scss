@@ -53,3 +53,42 @@ body {
     background-color: $gray-hover;
   }
 }
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__item {
+    padding-right: 25px;
+    position: relative;
+
+    &::after {
+      content: '/';
+      @extend %Rubik-r;
+      font-size: 14px;
+      font-weight: 400;
+      position: absolute;
+      right: 9px;
+      bottom: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+
+    @extend %Rubik-r;
+    font-size: 14px;
+    font-weight: 400;
+
+  }
+}

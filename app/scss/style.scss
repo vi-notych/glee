@@ -36,12 +36,12 @@
 
   &__link {
     font-size: 15px;
-    color: #69828e;
+    color: $dark-blue;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s;
 
     &:hover {
-      border-color: #69828e;
+      border-color: $dark-blue;
     }
 
   }
@@ -294,6 +294,20 @@
     position: absolute;
     right: -14px;
   }
+}
+
+.top {
+  text-align: center;
+  background-color: #edf1f4;
+  padding: 30px 0 30px;
+
+  &__title {
+    @extend %Rubik-l;
+    font-size: 36px;
+    color: $title;
+  }
+
+
 }
 
 .slider {
@@ -585,7 +599,7 @@
 
 
   &__item {
-    background-color: #feefe2;
+    background-color: $crema;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -665,10 +679,17 @@
 }
 
 .articles {
+  position: relative;
 
-  .title {
-    display: flex;
-    justify-content: space-between;
+  &::before {
+    content: '';
+    height: 170px;
+    width: 100%;
+    background-color: $beige;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: -1;
   }
 
   &__items {
@@ -768,17 +789,6 @@
   text-align: -webkit-center;
   position: relative;
 
-  &::before {
-    content: '';
-    height: 170px;
-    width: 100%;
-    background-color: $beige;
-    position: absolute;
-    top: -170px;
-    left: 0;
-    z-index: -1;
-  }
-
   &__items {
     display: flex;
     justify-content: space-around;
@@ -787,6 +797,77 @@
     padding: 90px 0;
 
   }
+}
+
+.modal {
+  max-width: 470px;
+  margin: 120px auto;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @extend %Rubik;
+    font-size: 14px;
+    color: $dark-blue;
+  }
+
+  &__label {
+    margin-bottom: 30px;
+
+    span {
+      margin-left: 205px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid $crema;
+    height: 60px;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+
+  &__btn--grey {
+    width: 100%;
+    height: 60px;
+    background-color: $gray;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: $gray-hover;
+    }
+  }
+
+  &__btn--whait {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    text-align: center;
+    color: $title;
+    font-size: 18px;
+    border: 2px solid $gray;
+    transition: color 0.3s;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__text {
+    padding: 35px 0 25px;
+    border-top: 2px solid $crema;
+    text-align: center;
+
+  }
+
 }
 
 

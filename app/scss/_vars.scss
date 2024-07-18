@@ -9,6 +9,8 @@ $global: #7d7d7d;
 $yellow: #fef7f0;
 $blue: #a3bbc8;
 $dark-grey: #243f4d;
+$dark-blue: #69828e;
+$crema: #feefe2;
 
 %DMSans {
   font-family: 'DMSans', sans-serif;
@@ -20,6 +22,15 @@ $dark-grey: #243f4d;
   font-weight: 500;
 }
 
+%Rubik-r {
+  font-family: 'Rubik-regular', sans-serif;
+  font-weight: 400;
+}
+
+%Rubik-l {
+  font-family: 'Rubik-light', sans-serif;
+  font-weight: 300;
+}
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
