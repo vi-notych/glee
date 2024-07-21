@@ -61,12 +61,12 @@
   }
 
   &__search {
-    background-color: #edf1f4;
+    background-color: $light-gray;
     margin-right: 20px;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #c0c4c8;
+      background-color: $light-gray-hover;
     }
   }
 
@@ -298,7 +298,7 @@
 
 .top {
   text-align: center;
-  background-color: #edf1f4;
+  background-color: $light-gray;
   padding: 30px 0 30px;
 
   &__title {
@@ -306,8 +306,6 @@
     font-size: 36px;
     color: $title;
   }
-
-
 }
 
 .slider {
@@ -342,7 +340,7 @@
 
   &__title {
     @extend %Rubik;
-    color: $dark-grey;
+    color: $dark-gray;
     font-size: 72px;
     line-height: 1;
     margin-bottom: 25px;
@@ -380,7 +378,7 @@
 
       &.slick-active button {
         background-color: #fff;
-        color: $dark-grey;
+        color: $dark-gray;
       }
     }
   }
@@ -503,7 +501,7 @@
   }
 
   &__name {
-    color: $dark-grey;
+    color: $dark-gray;
   }
 
   &__price {
@@ -622,13 +620,13 @@
 
   &__name {
     font-size: 26px;
-    color: $dark-grey;
+    color: $dark-gray;
     margin-bottom: 15px;
   }
 
   &__text {
     @extend %Rubik;
-    color: $dark-grey;
+    color: $dark-gray;
   }
 
   &__button {
@@ -871,9 +869,9 @@
 }
 
 .terms {
-  margin: 120px 0;
+  margin: 110px 0 100px;
   @extend %Rubik;
-  color: $dark-grey;
+  color: $dark-gray;
 
   &__title {
     font-size: 24px;
@@ -897,6 +895,273 @@
   }
 }
 
+.mission {
+  padding: 120px 0;
+
+  &__img {
+    width: 570px;
+    height: 680px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__wrapper {
+    padding-left: 50px;
+    width: 600px;
+  }
+
+  &__items {
+    @extend %Rubik;
+    padding: 60px 0 30px;
+    display: flex;
+    align-items: end;
+  }
+
+  &__item-years {
+    font-size: 140px;
+    color: $gray;
+    line-height: 1;
+    padding-right: 30px;
+  }
+
+  &__item-text {
+    color: $dark-gray;
+    line-height: 1.9;
+    padding-bottom: 15px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 0px;
+  }
+
+  &__text {
+    line-height: 1.9;
+    padding: 40px 0 55px;
+
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+
+    &::after {
+      content: ('');
+      width: 500px;
+      height: 2px;
+      background-color: #dbdfe6;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__name {
+    padding: 40px 30px 30px 80px;
+    position: relative;
+
+
+    &::before {
+      position: absolute;
+      top: 52px;
+      left: 22px;
+    }
+
+    &:nth-child(1)::before {
+      content: url(../images/icon/projects.svg);
+    }
+
+    &:nth-child(2)::before {
+      content: url(../images/icon/revenue.svg);
+    }
+
+    &:nth-child(3)::before {
+      content: url(../images/icon/awards.svg);
+    }
+
+    &:not(:last-child)::after {
+      content: ('');
+      width: 1px;
+      height: 80px;
+      background-color: #dbdfe6;
+      position: absolute;
+      bottom: 20px;
+      right: 0px;
+    }
+  }
+}
+
+.stat {
+  background-color: $orange;
+  margin-bottom: 120px;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    color: $dark-gray;
+    padding: 85px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+
+  &__value {
+    font-size: 36px;
+    margin: 10px 0;
+    position: relative;
+
+    &::after {
+      content: ('');
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: $gray;
+      position: absolute;
+      top: -42px;
+      right: 0;
+      z-index: 0;
+    }
+  }
+
+  &__img {
+    z-index: 1;
+  }
+
+}
+
+.team {
+  &__inner {
+    display: flex;
+    margin-bottom: 120px;
+  }
+
+  &__content {
+    width: 300px;
+    margin-right: 100px;
+  }
+
+  &__title {
+    text-align: start;
+  }
+
+  &__text {
+    @extend %Rubik;
+    line-height: 1.9;
+    color: $dark-gray;
+    margin-bottom: 45px;
+  }
+
+  &__button {
+    width: 170px;
+    border-radius: 4px;
+    padding: 16px 25px;
+  }
+
+  &__people {
+    width: 770px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__person {
+    max-width: 370px;
+    width: 100%;
+    height: 380px;
+    position: relative;
+  }
+
+  &__wrapper {
+    width: 325px;
+    height: 110px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.15);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__name {
+    font-size: 22px;
+    color: $logo;
+    margin-bottom: 15px;
+  }
+
+  &__position {
+    @extend %Rubik;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__google {
+    margin-left: 25px;
+    z-index: 1;
+    position: relative;
+
+    &::before {
+      content: ('');
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $light-gray;
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      z-index: -1;
+      transition: background-color 0.3s;
+    }
+
+    &:hover:before {
+      background-color: $light-gray-hover;
+    }
+  }
+
+  &__instagram {
+    z-index: 1;
+    position: relative;
+
+    &::before {
+      content: ('');
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $light-gray;
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      z-index: -1;
+      transition: background-color 0.3s;
+    }
+
+    &:hover:before {
+      background-color: $light-gray-hover;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 
 .shop {
@@ -915,7 +1180,7 @@
   &__title {
     text-transform: uppercase;
     font-size: 18px;
-    color: $dark-grey;
+    color: $dark-gray;
     margin-bottom: 30px;
     display: table;
     position: relative;
