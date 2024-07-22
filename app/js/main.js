@@ -16,8 +16,9 @@ $(function () {
     }
   };
 
-  var mixer1 = mixitup(containerEl1, config);
-  var mixer2 = mixitup(containerEl2, config);
+  if (containerEl1) mixitup(containerEl1, config);
+  if (containerEl2) mixitup(containerEl2, config);
+
 
   $('.shop__price--input').ionRangeSlider({
     type: "double",
