@@ -92,3 +92,39 @@ body {
 
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 110px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link,
+  &__next {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $gray;
+    margin-right: 15px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+
+  &__next {
+    width: 75px;
+  }
+
+  &__link--active {
+    background-color: $gray;
+  }
+}

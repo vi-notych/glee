@@ -20,19 +20,29 @@ $(function () {
   if (containerEl2) mixitup(containerEl2, config);
 
 
-  $('.shop__price--input').ionRangeSlider({
+  $('.filter__price').ionRangeSlider({
     type: "double",
     prefix: "$",
 
     onStart: function (data) {
-      $('.shop__price--from').text(data.from);
-      $('.shop__price--to').text(data.to);
+      $('.filter__price--from').text(data.from.toFixed(2));
+      $('.filter__price--to').text(data.to.toFixed(2));
     },
     onChange: function (data) {
-      $('.shop__price--from').text(data.from);
-      $('.shop__price--to').text(data.to);
+      $('.filter__price--from').text(data.from.toFixed(2));
+      $('.filter__price--to').text(data.to.toFixed(2));
     },
   });
 
+  $(".filter__star").rateYo({
+    starWidth: "15px",
+    spacing: "4px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true,
+  });
+
 })
+
+
 
