@@ -1510,12 +1510,12 @@
     width: 210px;
   }
 
-  &__buttons {
+  &__tabs {
     display: flex;
     justify-content: center;
   }
 
-  &__button {
+  &__tab {
     max-width: 245px;
     width: 100%;
     background-color: $light-gray;
@@ -1534,9 +1534,24 @@
 
     &:hover {
       background-color: $gray;
+    }
+
+    &.product__tab--active {
+      background-color: $gray;
       color: #fff;
     }
   }
+
+  &__text-content {
+    margin: 30px 0;
+    line-height: 1.8;
+    display: none;
+
+    &.product__text-content--active {
+      display: block;
+    }
+  }
+
 
   &__related {
     margin-top: 100px;
