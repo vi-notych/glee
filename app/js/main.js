@@ -1,5 +1,47 @@
 $(function () {
 
+  $('.product__slide-thumb').slick({
+    asNavFor: '.product__slide-big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+
+  $('.product__slide-big').slick({
+    asNavFor: '.product__slide-thumb',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
+
+
+  $('.product__items').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="product__slick-prev"><img src="images/arrow-left.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="product__slick-next"><img src="images/arrow-rigth.svg" alt=""></button>'
+  });
+
+
+
+  $('.slider__inner').slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    //autoplay: true,
+    //autoplaySpead: 2000
+  })
+
+
+
+  $('.product__sum').styler();
+
+
+
   $('.shop__filter-btn').on('click', function () {
     $('.shop__filter-btn').removeClass('shop__filter-btn--active');
     $(this).addClass('shop__filter-btn--active');
@@ -13,13 +55,7 @@ $(function () {
     $('.product-card').removeClass('product-card--list');
   });
 
-  $('.slider__inner').slick({
-    dots: true,
-    arrows: false,
-    fade: true,
-    //autoplay: true,
-    //autoplaySpead: 2000
-  })
+
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
@@ -32,6 +68,7 @@ $(function () {
 
   if (containerEl1) mixitup(containerEl1, config);
   if (containerEl2) mixitup(containerEl2, config);
+
 
 
   $('.filter__price').ionRangeSlider({
@@ -48,6 +85,7 @@ $(function () {
     },
   });
 
+
   $(".filter__star").rateYo({
     starWidth: "15px",
     spacing: "4px",
@@ -57,7 +95,15 @@ $(function () {
   });
 
   $(".product-card__star").rateYo({
-    starWidth: "15px",
+    starWidth: "20px",
+    spacing: "4px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true,
+  });
+
+  $(".product__star").rateYo({
+    starWidth: "20px",
     spacing: "4px",
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",

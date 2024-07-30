@@ -559,7 +559,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.1);
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   cursor: pointer;
   position: relative;
 
@@ -1398,57 +1398,270 @@
     color: $dark-gray;
     cursor: pointer;
   }
+
+  .jq-ry-container {
+    padding: 0;
+  }
+
+  .irs {
+    &--flat .irs-line {
+      background-color: $gray;
+      height: 2px;
+      top: 0;
+    }
+
+    &--flat .irs-bar {
+      background-color: $gray;
+      height: 4px;
+      top: 0;
+    }
+
+    &--flat .irs-handle {
+      top: -5px;
+      width: 15px;
+      height: 15px;
+      background-color: #a3bbc8;
+    }
+
+    &--flat .irs-handle>i:first-child {
+      display: none;
+    }
+
+    &--flat .irs-max,
+    .irs-min {
+      display: none;
+    }
+
+    &-single {
+      display: none;
+    }
+
+    &-from {
+      display: none;
+    }
+
+    &-to {
+      display: none;
+    }
+
+    &--flat {
+      height: 30px;
+    }
+  }
+
 }
 
-.jq-ry-container {
-  padding: 0;
+
+.product {
+  margin: 125px 0;
+  @extend %Rubik-r;
+  color: $title;
+
+  &__inner {
+    display: flex;
+    margin-bottom: 80px;
+  }
+
+  &__slide {
+    margin-right: 70px;
+    display: flex;
+  }
+
+  &__slide-thumb {
+    width: 138px;
+    margin-right: 25px;
+  }
+
+  &__slide-items {
+    margin-bottom: 21px;
+    cursor: pointer;
+  }
+
+  &__slide-big {
+    width: 387px;
+  }
+
+  &__content {
+    max-width: 550px;
+  }
+
+  &__title {
+    margin: 30px 0 20px;
+    font-size: 40px;
+  }
+
+  &__price {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+
+  &__text {
+    margin: 30px 0;
+    line-height: 1.8;
+  }
+
+  &__btn {
+    display: inline;
+    margin-left: 15px;
+    text-transform: uppercase;
+    @extend %Rubik-r;
+    border-radius: 5px;
+    padding: 16px 50px;
+    width: 210px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    max-width: 245px;
+    width: 100%;
+    background-color: $light-gray;
+    border-radius: 5px;
+    padding: 15px 10px;
+    text-align: center;
+    @extend %Rubik;
+    color: $dark-gray;
+    font-size: 18px;
+    transition: background-color, color 0.3s;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      background-color: $gray;
+      color: #fff;
+    }
+  }
+
+  &__related {
+    margin-top: 100px;
+  }
+
+  &__related-title {
+    display: flex;
+    align-items: start;
+  }
+
+  &__items {
+    margin-top: 50px;
+    margin-left: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+
+  &__slick-prev,
+  &__slick-next {
+    width: 50px;
+    height: 50px;
+    border: 2px solid $light-gray;
+    border-radius: 3px;
+    padding-left: 13px;
+    cursor: pointer;
+    position: absolute;
+    top: -90px;
+    right: 0;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $gray;
+    }
+  }
+
+  &__slick-prev {
+    right: 80px;
+  }
+
+  .jq-number {
+    position: relative;
+    padding: 0;
+
+    input {
+      border-color: transparent;
+    }
+
+    &__field {
+      width: 150px;
+      border: 1px solid $gray;
+      transform: translateY(1px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 48px;
+        width: 1px;
+        height: 50px;
+        background-color: $gray;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 48px;
+        width: 1px;
+        height: 50px;
+        background-color: $gray;
+      }
+    }
+
+    &__field input {
+      text-align: center;
+      width: 100%;
+      height: 50px;
+      color: $dark-gray;
+    }
+
+    &__spin {
+      position: absolute;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.minus {
+        left: 5px;
+      }
+
+      &.plus {
+        right: 5px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 14px;
+          left: 20px;
+          width: 0.5px;
+          height: 10px;
+          background-color: $dark-gray;
+          ;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 19px;
+        left: 15px;
+        width: 10px;
+        height: 1px;
+        background-color: $dark-gray;
+      }
+    }
+  }
 }
 
-.irs {
-  &--flat .irs-line {
-    background-color: $gray;
-    height: 2px;
-    top: 0;
-  }
 
-  &--flat .irs-bar {
-    background-color: $gray;
-    height: 4px;
-    top: 0;
-  }
 
-  &--flat .irs-handle {
-    top: -5px;
-    width: 15px;
-    height: 15px;
-    background-color: #a3bbc8;
-  }
 
-  &--flat .irs-handle>i:first-child {
-    display: none;
-  }
 
-  &--flat .irs-max,
-  .irs-min {
-    display: none;
-  }
 
-  &-single {
-    display: none;
-  }
 
-  &-from {
-    display: none;
-  }
-
-  &-to {
-    display: none;
-  }
-
-  &--flat {
-    height: 30px;
-  }
-}
 
 
 
