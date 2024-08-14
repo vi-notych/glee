@@ -10,7 +10,7 @@ $(function () {
   });
 
 
-  $('.product__slide-thumb').slick({
+  $('.product__slide-thumbs').slick({
     asNavFor: '.product__slide-big',
     focusOnSelect: true,
     slidesToShow: 3,
@@ -20,7 +20,7 @@ $(function () {
   });
 
   $('.product__slide-big').slick({
-    asNavFor: '.product__slide-thumb',
+    asNavFor: '.product__slide-thumbs',
     draggable: false,
     arrows: false,
     fade: true
@@ -48,7 +48,7 @@ $(function () {
 
 
 
-  $('.product__sum').styler();
+  $('.product__count').styler();
 
 
 

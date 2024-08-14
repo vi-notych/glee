@@ -624,6 +624,7 @@
 
   &__name {
     color: $dark-gray;
+    @extend %DMSans;
   }
 
   &__price {
@@ -1115,7 +1116,7 @@
 
   }
 
-  &__info {
+  &__stats {
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -1131,7 +1132,7 @@
     }
   }
 
-  &__stats {
+  &__stat {
     padding: 40px 30px 30px 80px;
     position: relative;
 
@@ -1373,6 +1374,14 @@
   &__items {
     display: flex;
     margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $gray;
+
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -1396,7 +1405,6 @@
     @extend %Rubik;
     font-size: 14px;
     color: $dark-gray;
-    cursor: pointer;
   }
 
   .jq-ry-container {
@@ -1451,7 +1459,6 @@
 
 }
 
-
 .product {
   margin: 125px 0;
   @extend %Rubik-r;
@@ -1467,12 +1474,12 @@
     display: flex;
   }
 
-  &__slide-thumb {
+  &__slide-thumbs {
     width: 138px;
     margin-right: 25px;
   }
 
-  &__slide-items {
+  &__slide-thumb {
     margin-bottom: 21px;
     cursor: pointer;
   }
