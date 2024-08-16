@@ -110,6 +110,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $dark-gray;
     background-color: transparent;
     border: 1px solid $gray;
     margin-right: 15px;
@@ -126,5 +127,7 @@ body {
 
   &__link--active {
     background-color: $gray;
+    color: #fff;
   }
+
 }

@@ -624,7 +624,7 @@
 
   &__name {
     color: $dark-gray;
-    @extend %DMSans;
+    @extend %Rubik-r;
   }
 
   &__price {
@@ -1315,6 +1315,32 @@
     }
   }
 
+  &__search {
+    display: flex;
+  }
+
+  &__search-input {
+    border: 2px solid $light-gray;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 255px;
+    height: 45px;
+    padding: 0 5px 0 15px;
+  }
+
+  &__search-btn {
+    border: none;
+    background-color: $light-gray;
+    width: 45px;
+    height: 45px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
   &__title {
     text-transform: uppercase;
     font-size: 18px;
@@ -1456,6 +1482,50 @@
       height: 30px;
     }
   }
+
+  &__item {
+    display: flex;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.1);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  &__date {
+    @extend %Rubik;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 14px;
+    margin-left: 20px;
+
+    &::before {
+      content: url('../images/icon/calendar-gray.svg');
+      position: absolute;
+      top: 0px;
+      left: -18px;
+      z-index: 25;
+    }
+  }
+
+  &__text {
+    @extend %Rubik;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: $dark-gray;
+  }
+
+
 
 }
 
@@ -1678,6 +1748,101 @@
   }
 }
 
+.blog {
+  margin: 120px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-img {
+    position: relative;
+  }
+
+  &__item-info {
+    width: 275px;
+    height: 70px;
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    background-color: $blue;
+    color: #fff;
+    @extend %Rubik-r;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__item-date {
+    margin-left: 40px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+      content: url('../images/icon/calendar.svg');
+      position: absolute;
+      top: -2px;
+      left: -18px;
+    }
+  }
+
+  &__item-author {
+    margin-left: 40px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+      content: url('../images/icon/user.svg');
+      position: absolute;
+      top: -2px;
+      left: -18px;
+
+    }
+  }
+
+  &__item-title {
+    @extend %Rubik-r;
+    font-size: 36px;
+    color: $title;
+    margin: 30px 0;
+  }
+
+  &__item-text {
+    margin-bottom: 40px;
+    color: $dark-gray;
+    @extend %Rubik;
+    line-height: 30px;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: 1px solid $blue;
+    color: $blue;
+    transition: background-color 0.3s;
+    margin-bottom: 50px;
+    padding: 20px 25px;
+    max-width: 180px;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+
+  .pagination {
+    justify-content: start;
+    padding-top: 0;
+  }
+
+  &__filter {
+    width: 270px;
+    margin-left: 70px;
+  }
+
+
+
+
+}
 
 
 
