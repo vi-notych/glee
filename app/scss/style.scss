@@ -2118,6 +2118,143 @@
   }
 }
 
+.contact {
+  margin: 120px 0;
+
+  &__text {
+    text-align: center;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__info-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 120px;
+  }
+
+  &__item {
+    height: 380px;
+    width: 100%;
+    background-color: $pale-gray;
+    border: 3px solid transparent;
+    padding: 70px 10px 60px;
+    text-align: center;
+    @extend %Rubik-r;
+    color: $dark-gray;
+    line-height: 1.7;
+    transition: border-color 0.3s;
+
+    &:hover:not(.address) {
+      border-color: $gray;
+
+      .contact__icon {
+        background-color: $gray;
+      }
+
+      path {
+        fill: #fff;
+      }
+    }
+
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+
+    path {
+      transition: fill 0.3s;
+      fill: $gray;
+    }
+  }
+
+  h5 {
+    font-size: 20px;
+    color: $title;
+    margin-bottom: 15px;
+  }
+
+  a {
+    display: block;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-box {
+    width: 620px;
+    color: $dark-blue;
+  }
+
+  &__input-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    text-transform: uppercase;
+    max-width: 300px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    padding: 5px 20px;
+    background-color: $pale-gray;
+    margin-bottom: 30px;
+  }
+
+  textarea {
+    text-transform: uppercase;
+    width: 100%;
+    height: 170px;
+    border: none;
+    padding: 5px 20px;
+    background-color: $pale-gray;
+    margin-bottom: 30px;
+  }
+
+
+  &__name {
+    background: url('../images/icon/user-input.png') no-repeat center right 10px;
+  }
+
+  &__letter {
+    background: url('../images/icon/letter-input.png') no-repeat center right 10px;
+  }
+
+  &__textarea {
+    background: url('../images/icon/comment-input.png') no-repeat top 10px right 10px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    background-color: $blue;
+    border-radius: 5px;
+    @extend %Rubik-r;
+    font-size: 16px;
+    min-width: 200px;
+    padding: 20px 35px;
+
+    &:hover {
+      background-color: $dark-blue;
+    }
+  }
+}
+
+
+
 
 
 
