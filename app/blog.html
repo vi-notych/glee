@@ -211,7 +211,8 @@
           </div>
 
           <div class="blog__filter filters">
-            <div class="filter__form search">
+            <!-- filter search -->
+            <div class="filter__form">
               <form class="filter__search" action="#">
                 <input type="text" placeholder="">
                 <button type="submit">
@@ -219,7 +220,8 @@
                 </button>
               </form>
             </div>
-            <form class="filter__form category">
+            <!-- filter category -->
+            <form class="filter__form">
               <h3 class="filter__title">category</h3>
               <label class="filter__label">
                 <input class="filter__input" type="checkbox" checked>
@@ -257,45 +259,38 @@
                 </span>
               </label>
             </form>
-            <div class="filter__form recent-posts">
+            <!-- filter recent-posts -->
+            <div class="filter__form">
               <h3 class="filter__title">
                 recent-posts
               </h3>
               <a class="filter__item" href="#">
                 <img src="images/posts/1.jpg" alt="photo-posts">
-                <div class="filter__item-box">
-                  <p class="filter__text">
-                    Corem ipsum dolor tetur adipisicing elit
-                  </p>
-                  <p class="filter__date">28 january,2020</p>
-                </div>
+                <p class="filter__text">
+                  Corem ipsum dolor tetur adipisicing elit
+                </p>
+                <p class="filter__date">28 january,2020</p>
               </a>
               <a class="filter__item" href="#">
                 <img src="images/posts/2.jpg" alt="photo-posts">
-                <div class="filter__item-box">
-                  <p class="filter__text">
-                    Fdipisicing elit, sed do eiusmod tempor
-                  </p>
-                  <p class="filter__date">28 january,2020</p>
-                </div>
+                <p class="filter__text">
+                  Fdipisicing elit, sed do eiusmod tempor
+                </p>
+                <p class="filter__date">28 january,2020</p>
               </a>
               <a class="filter__item" href="#">
                 <img src="images/posts/3.jpg" alt="photo-posts">
-                <div class="filter__item-box">
-                  <p class="filter__text">
-                    Eonsectetur adipisicing elit, sed do eiusmod
-                  </p>
-                  <p class="filter__date">28 january,2020</p>
-                </div>
+                <p class="filter__text">
+                  Eonsectetur adipisicing elit, sed do eiusmod
+                </p>
+                <p class="filter__date">28 january,2020</p>
               </a>
               <a class="filter__item" href="#">
                 <img src="images/posts/4.jpg" alt="photo-posts">
-                <div class="filter__item-box">
-                  <p class="filter__text">
-                    Gnim ad minim veniam, quis nostrud
-                  </p>
-                  <p class="filter__date">28 january,2020</p>
-                </div>
+                <p class="filter__text">
+                  Gnim ad minim veniam, quis nostrud
+                </p>
+                <p class="filter__date">28 january,2020</p>
               </a>
             </div>
           </div>
@@ -409,13 +404,21 @@
 
 </html>
 
-&__checkbox {
-padding: 10px 15px;
-width: 100%;
-border-radius: 4px;
-background-color: #fff;
-color: $dark-gray;
+&__item {
 display: flex;
-justify-content: space-between;
-align-items: center;
+cursor: pointer;
+
+&:hover {
+.filter__text {
+color: $orange-hover;
+}
+}
+
+&:not(:last-child) {
+margin-bottom: 20px;
+}
+
+img {
+margin-right: 20px;
+}
 }

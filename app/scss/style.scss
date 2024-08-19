@@ -1387,6 +1387,7 @@
     }
   }
 
+
   &__checkbox {
     padding: 10px 15px;
     width: 100%;
@@ -1411,7 +1412,6 @@
 
     &:hover {
       border-color: $gray;
-
     }
 
     &:last-child {
@@ -1489,13 +1489,11 @@
   }
 
   &__item {
-    display: flex;
+    position: relative;
+    display: block;
     cursor: pointer;
-    transition: color 0.3s;
 
     &:hover {
-      color: $orange-hover;
-
       .filter__text {
         color: $orange-hover;
       }
@@ -1506,7 +1504,9 @@
     }
 
     img {
-      margin-right: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -1514,8 +1514,8 @@
     @extend %Rubik;
     text-transform: uppercase;
     position: relative;
-    font-size: 14px;
-    margin-left: 20px;
+    font-size: 12px;
+    margin-left: 110px;
 
     &::before {
       content: url('../images/icon/calendar-gray.svg');
@@ -1531,12 +1531,10 @@
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 10px;
+    margin-left: 90px;
     color: $dark-gray;
     transition: color 0.3s;
   }
-
-
-
 }
 
 .product {
@@ -1851,7 +1849,7 @@
   }
 }
 
-.blog-one {
+.post {
   &__text {
     @extend %Rubik;
     font-size: 16px;
@@ -1925,12 +1923,9 @@
     @extend %Rubik;
     font-size: 16px;
     padding-right: 10px;
-    transition: color 0.3s;
 
     &:hover {
-      color: $orange-hover;
-
-      .blog-one__name {
+      .post__name {
         color: $orange-hover;
       }
     }
