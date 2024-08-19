@@ -1492,6 +1492,7 @@
     position: relative;
     display: block;
     cursor: pointer;
+    padding-left: 90px;
 
     &:hover {
       .filter__text {
@@ -1515,7 +1516,7 @@
     text-transform: uppercase;
     position: relative;
     font-size: 12px;
-    margin-left: 110px;
+    margin-left: 20px;
 
     &::before {
       content: url('../images/icon/calendar-gray.svg');
@@ -1531,7 +1532,7 @@
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 10px;
-    margin-left: 90px;
+    margin-left: 0px;
     color: $dark-gray;
     transition: color 0.3s;
   }
