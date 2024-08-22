@@ -6,7 +6,16 @@ const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
+const nunjucksRender = require('gulp-nunjucks-render');
+const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
+
+function nunjucks() {
+  return src('app/*.njk')
+    .pipe(nunjucksRender())
+    .pipe(dest('app'))
+    .pipe(browserSync.stream())
+}
 
 // функция отвечает за сборку скриптов
 function scripts() {
@@ -27,13 +36,16 @@ function scripts() {
 }
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
+    .pipe(scss({ outputStyle: 'compressed' }))
+    // .pipe(concat('style.min.css'))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
-    .pipe(concat('style.min.css'))
-    .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
@@ -45,7 +57,8 @@ function images() {
 }
 
 function watching() {
-  watch(['app/scss/style.scss'], styles)
+  watch(['app/**/*.scss'], styles)
+  watch(['app/*.njk'], nunjucks)
   watch(['app/js/main.js'], scripts)
   watch(['app/*.html']).on('change', browserSync.reload);
 }
@@ -54,7 +67,8 @@ function browsersync() {
   browserSync.init({
     server: {
       baseDir: "app/"
-    }
+    },
+    notify: false
   });
 }
 
@@ -76,8 +90,9 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
+exports.nunjucks = nunjucks;
 exports.images = images;
 
 
 exports.build = series(cleanDist, images, building);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(nunjucks, styles, scripts, browsersync, watching);

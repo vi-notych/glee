@@ -1,0 +1,139 @@
+.header {
+  padding: 50px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %Rubik;
+    color: $logo;
+  }
+
+  &__logo {
+    display: flex;
+    padding-right: 170px;
+    font-size: 36px;
+    color: $logo;
+
+    span {
+      margin-left: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    font-size: 15px;
+    color: $dark-blue;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $dark-blue;
+    }
+
+  }
+
+  &__btn {
+    display: flex;
+  }
+
+  &__search,
+  &__library {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__search {
+    background-color: $light-gray;
+    margin-right: 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $light-gray-hover;
+    }
+  }
+
+  &__library {
+    background-color: $gray;
+    margin-left: 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $gray-hover;
+    }
+  }
+
+  &__cart,
+  &__heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 90px;
+    background-color: $orange;
+    padding-top: 5px;
+    position: relative;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $orange-hover;
+    }
+
+    & span {
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      @extend %DMSans;
+      font-size: 10px;
+      color: #6d7f88;
+      top: 10px;
+    }
+  }
+
+  &__cart {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-right: 10px;
+
+    & span {
+      right: 32px;
+    }
+  }
+
+  &__heart {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-left: 10px;
+
+    & span {
+      right: 18px;
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 30px;
+      background-color: #fde7d3;
+      position: absolute;
+      top: 9px;
+      right: -0.5px;
+      z-index: 2;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.features {
+  &__info {
+    display: flex;
+    margin-bottom: 75px;
+    background-color: $beige;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 45px 120px 45px 220px;
+
+    &:not(:first-child) {
+      border-left: 1px solid #e8e4df;
+    }
+
+    &:nth-child(1) .features__subtitle::before {
+      content: url('../images/icon/support.png');
+    }
+
+    &:nth-child(2) .features__subtitle::before {
+      content: url('../images/icon/delivery.png');
+    }
+
+    &:nth-child(3) .features__subtitle::before {
+      content: url('../images/icon/payment.png');
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: #414141;
+    margin-bottom: 5px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -75px;
+    }
+  }
+}

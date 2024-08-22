@@ -1,0 +1,100 @@
+.mission {
+  padding: 120px 0;
+
+  &__img {
+    width: 50%;
+    height: 1stats
+  }
+
+  &__inner {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__wrapper {
+    width: 50%;
+  }
+
+  &__experience {
+    @extend %Rubik;
+    padding: 60px 0 30px;
+    display: flex;
+    align-items: end;
+  }
+
+  &__years {
+    font-size: 140px;
+    color: $gray;
+    line-height: 1;
+    padding-right: 30px;
+  }
+
+  &__slogan {
+    color: $dark-gray;
+    line-height: 1.9;
+    padding-bottom: 15px;
+  }
+
+  &__value {
+    font-size: 36px;
+    color: $title;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+
+  &__text {
+    line-height: 1.9;
+    padding: 40px 0 55px;
+
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+
+    &::after {
+      content: ('');
+      width: 500px;
+      height: 2px;
+      background-color: #dbdfe6;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__stat {
+    padding: 40px 30px 30px 80px;
+    position: relative;
+
+
+    &::before {
+      position: absolute;
+      top: 52px;
+      left: 22px;
+    }
+
+    &:nth-child(1)::before {
+      content: url(../images/icon/projects.svg);
+    }
+
+    &:nth-child(2)::before {
+      content: url(../images/icon/revenue.svg);
+    }
+
+    &:nth-child(3)::before {
+      content: url(../images/icon/awards.svg);
+    }
+
+    &:not(:last-child)::after {
+      content: ('');
+      width: 1px;
+      height: 80px;
+      background-color: #dbdfe6;
+      position: absolute;
+      bottom: 20px;
+      right: 0px;
+    }
+  }
+}

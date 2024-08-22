@@ -1,0 +1,94 @@
+.team {
+  margin-bottom: 120px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 300px;
+    width: 100%;
+    margin-right: 100px;
+  }
+
+  &__title {
+    text-align: start;
+  }
+
+  &__text {
+    @extend %Rubik;
+    line-height: 1.9;
+    color: $dark-gray;
+    margin-bottom: 45px;
+  }
+
+  &__button {
+    width: 170px;
+    border-radius: 4px;
+    padding: 16px 25px;
+  }
+
+  &__people {
+    max-width: 770px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__person {
+    max-width: 370px;
+    width: 100%;
+    height: 380px;
+    position: relative;
+  }
+
+  &__wrapper {
+    width: 325px;
+    height: 110px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.15);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__name {
+    font-size: 22px;
+    color: $logo;
+    margin-bottom: 15px;
+  }
+
+  &__position {
+    @extend %Rubik;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $light-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      background-color: $light-gray-hover;
+    }
+  }
+}

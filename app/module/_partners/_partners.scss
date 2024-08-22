@@ -1,0 +1,13 @@
+.partners {
+  background-color: $beige;
+  text-align: -webkit-center;
+  position: relative;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 90px 0;
+
+  }
+}

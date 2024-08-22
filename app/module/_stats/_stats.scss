@@ -1,0 +1,42 @@
+.stats {
+  background-color: $orange;
+  margin-bottom: 120px;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    padding: 85px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $dark-gray;
+    font-size: 18px;
+  }
+
+  &__value {
+    font-size: 36px;
+    margin: 10px 0;
+    position: relative;
+
+    &::after {
+      content: ('');
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: $gray;
+      position: absolute;
+      top: -42px;
+      right: 0;
+      z-index: 0;
+    }
+  }
+
+  &__img {
+    z-index: 1;
+  }
+
+}

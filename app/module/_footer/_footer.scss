@@ -1,0 +1,151 @@
+.footer {
+  font-size: 14px;
+
+  &__top {
+    padding: 80px 0;
+    display: flex;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 36px;
+    color: $logo;
+    margin-bottom: 24px;
+
+    span {
+      margin-left: 15px;
+    }
+
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contact,
+  &__services,
+  &__account {
+    width: 200px;
+    margin-right: 100px;
+  }
+
+  &__newsletter {
+    width: 270px;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: #1f2044;
+    text-transform: uppercase;
+    margin: 20px 0 25px;
+  }
+
+  &__address,
+  &__phone {
+    margin-bottom: 16px;
+  }
+
+  &__address,
+  &__phone,
+  &__email {
+
+    transition: color 0.3s;
+
+    & span {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: #1f2044
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__list,
+  &__contact,
+  &__text,
+  &__bottom {
+    @extend %Rubik;
+  }
+
+  &__link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: #1f2044;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__input {
+    background-color: $yellow;
+    color: #17262d;
+    max-width: 170px;
+    font-size: 12px;
+    font-weight: 200;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    margin-top: 40px;
+
+    &::placeholder {
+      color: $logo;
+    }
+  }
+
+  &__button {
+    border: none;
+    width: 100px;
+    background-color: $gray;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $gray-hover;
+    }
+  }
+
+  &__bottom {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dae4e9;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__bottom &__item {
+    position: relative;
+  }
+
+  &__bottom &__item:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &__bottom &__item:not(:last-child)::before {
+    content: "";
+    height: 17px;
+    width: 1px;
+    background-color: $global;
+    position: absolute;
+    right: -14px;
+  }
+}
