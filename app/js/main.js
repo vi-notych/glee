@@ -1,5 +1,16 @@
 $(function () {
 
+  $('.header__nav-btn').on('click', function () {
+    $('.header__list').toggleClass('header__list--active');
+  });
+
+
+  $('.title-list').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  });
+
+
   $('.product__tab').on('click', function (e) {
     e.preventDefault();
     $('.product__tab').removeClass('product__tab--active');
