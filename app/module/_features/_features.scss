@@ -42,3 +42,45 @@
     }
   }
 }
+
+@media (max-width:1280px) {
+  .features {
+    &__item {
+      padding: 45px 50px 45px 130px;
+    }
+  }
+}
+
+@media (max-width:1024px) {
+  .features {
+    &__item {
+      padding: 35px 25px 35px 100px;
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .features {
+    &__info {
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      padding: 25px 25px 25px 150px;
+
+      &:not(:first-child) {
+        border-top: 1px solid #e8e4df;
+        border-left: none;
+      }
+    }
+  }
+}
+
+@media (max-width:360px) {
+  .features {
+    &__item {
+      padding-left: 100px;
+    }
+  }
+}

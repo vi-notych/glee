@@ -1,9 +1,7 @@
 .offers {
   &__inner {
     display: flex;
-
   }
-
 
   &__item {
     background-color: $crema;
@@ -47,6 +45,92 @@
 
     &:hover {
       background-color: #edddce;
+    }
+  }
+}
+
+@media (max-width:1280px) {
+  .offers {
+    &__item {
+      padding: 70px 70px 70px 220px;
+      margin-bottom: 80px;
+    }
+
+    .btn {
+      padding: 20px 20px;
+    }
+
+    &__img {
+      left: 10px;
+      max-height: 100%;
+    }
+  }
+}
+
+@media (max-width:1024px) {
+  .offers {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__item {
+      margin-top: 50px;
+      padding-left: 300px;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
+
+    &__img {
+      left: 80px;
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .offers {
+    &__item {
+      padding: 30px 30px 30px 150px;
+      margin-top: 0;
+      margin-bottom: 40px;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
+
+    &__name {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__img {
+      max-height: 80%;
+      left: 10px;
+      bottom: 20px;
+    }
+
+    .btn {
+      max-width: 150px;
+      padding: 10px 10px;
+    }
+  }
+}
+
+@media (max-width:360px) {
+  .offers {
+    &__item {
+      padding: 20px 20px 20px 120px;
+    }
+
+    img {
+      left: 5px;
+      bottom: 50px;
+      max-height: 70%;
     }
   }
 }
