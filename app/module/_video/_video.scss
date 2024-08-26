@@ -31,3 +31,21 @@
     }
   }
 }
+
+@media (max-width:768px) {
+  .video {
+    &__inner {
+      height: 400px;
+      margin-bottom: 85px;
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .video {
+    &__inner {
+      height: 300px;
+      margin-bottom: 55px;
+    }
+  }
+}
