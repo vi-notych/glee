@@ -335,5 +335,14 @@
 }
 
 @media (max-width:360px) {
-  .products {}
+  .products {
+    &__tabs {
+      flex-wrap: wrap;
+      margin: 0 30px 30px;
+    }
+
+    &__tab {
+      margin-bottom: 10px;
+    }
+  }
 }

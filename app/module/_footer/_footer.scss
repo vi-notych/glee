@@ -210,29 +210,8 @@
       margin-bottom: 10px;
     }
 
-    &__list {
-      display: none;
-    }
-
     &__title {
       margin: 15px 0;
-    }
-
-    .title-list {
-      pointer-events: auto;
-      cursor: pointer;
-      position: relative;
-
-      &::after {
-        content: url('../images/icon/angle-down.svg');
-        position: absolute;
-        top: -5px;
-        right: 15px;
-      }
-    }
-
-    .active::after {
-      transform: rotate(180deg);
     }
 
     &__services,

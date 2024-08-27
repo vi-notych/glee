@@ -5,12 +5,6 @@ $(function () {
   });
 
 
-  $('.title-list').on('click', function () {
-    $(this).next().slideToggle();
-    $(this).toggleClass('active');
-  });
-
-
   $('.product__tab').on('click', function (e) {
     e.preventDefault();
     $('.product__tab').removeClass('product__tab--active');

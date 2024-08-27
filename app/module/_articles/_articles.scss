@@ -94,12 +94,14 @@
 
   &__wrapper {
     position: relative;
-    padding: 35px 30px 10px;
+    padding: 35px 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 167px;
     max-height: 167px;
-    height: 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
   &__name {
@@ -108,14 +110,13 @@
   }
 
   &__info {
-    padding: 17px 0 10px;
+    padding: 17px 0 0px;
     font-size: 12px;
     text-transform: uppercase;
     border-top: 1px solid #e0e0e0;
     display: flex;
     justify-content: flex-start;
     position: relative;
-    bottom: 0;
   }
 
   &__data {
@@ -138,8 +139,13 @@
       max-width: 310px;
     }
 
+    &__wrapper {
+      height: 160px;
+      padding: 35px 10px 20px;
+    }
+
     &__name {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 }
@@ -159,7 +165,14 @@
 
     &__item {
       max-width: 450px;
-      width: 100%;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+
+      img {
+        width: calc(100% + 3px);
+        max-width: calc(100% + 3px);
+        margin-left: -1px;
+      }
     }
 
     &__wrapper {

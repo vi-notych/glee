@@ -89,7 +89,7 @@
   }
 }
 
-@media (max-width:480px) {
+@media (max-width:768px) {
   .offers {
     &__item {
       padding: 30px 30px 30px 150px;
@@ -110,7 +110,7 @@
     }
 
     &__img {
-      max-height: 80%;
+      //max-height: 90%;
       left: 10px;
       bottom: 20px;
     }
