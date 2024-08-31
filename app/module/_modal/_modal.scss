@@ -8,11 +8,10 @@
     @extend %Rubik;
     font-size: 14px;
     color: $dark-blue;
+    margin: 0 15px;
   }
 
   &__label {
-    margin-bottom: 30px;
-
     span {
       margin-left: 205px;
     }
@@ -58,6 +57,7 @@
   }
 
   &__wrapper {
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
 
@@ -76,5 +76,22 @@
     text-align: center;
 
   }
+}
 
+@media (max-width:480px) {
+  .modal {
+    margin: 80px 0;
+  }
+}
+
+@media (max-width:360px) {
+  .modal {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__label {
+      margin-bottom: 10px;
+    }
+  }
 }

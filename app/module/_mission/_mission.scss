@@ -3,7 +3,6 @@
 
   &__img {
     width: 50%;
-    height: 1stats
   }
 
   &__inner {
@@ -95,6 +94,93 @@
       position: absolute;
       bottom: 20px;
       right: 0px;
+    }
+  }
+}
+
+@media (max-width:1280px) {
+  .mission {
+    padding: 80px 0;
+
+    &__img {
+      display: none;
+    }
+
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__experience {
+      justify-content: center;
+      padding-top: 0;
+    }
+
+    &__stats {
+      &::after {
+        content: ('');
+        width: 100%;
+      }
+    }
+
+    &__stat {
+      width: 100%;
+    }
+
+    &__text {
+      padding-top: 0;
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .mission {
+    &__years {
+      font-size: 120px;
+    }
+
+    &__stat {
+      padding: 40px 20px 30px 65px;
+
+      &::before {
+        left: 12px;
+      }
+    }
+
+    &__value {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .mission {
+    padding: 60px 0;
+
+    &__stats {
+      flex-wrap: wrap;
+    }
+
+    &__stat {
+      width: 100%;
+      padding: 20px 10px 20px 80px;
+
+      &::before {
+        left: 22px;
+        top: 28px;
+      }
+
+      &:not(:last-child)::after {
+        content: ('');
+        width: 100%;
+        height: 2px;
+        background-color: #dbdfe6;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    &__text {
+      padding-bottom: 30px;
     }
   }
 }

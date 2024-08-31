@@ -76,6 +76,7 @@
 
   &__form-box {
     width: 620px;
+    margin-right: 30px;
     color: $dark-blue;
   }
 
@@ -107,6 +108,7 @@
 
 
   &__name {
+    margin-right: 10px;
     background: url('../images/icon/user-input.png') no-repeat center right 10px;
   }
 
@@ -129,6 +131,93 @@
 
     &:hover {
       background-color: $dark-blue;
+    }
+  }
+}
+
+
+@media (max-width:1024px) {
+  .contact {
+    margin: 80px 0;
+
+    &__info-box {
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      position: relative;
+      height: 160px;
+      padding: 30px 0 30px 160px;
+      text-align: left;
+
+      h5 {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      left: 40px;
+      top: 40px;
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .contact {
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      iframe {
+        width: 100%;
+      }
+    }
+
+    &__form-box {
+      margin-bottom: 30px;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &__input-box {
+      flex-wrap: wrap;
+    }
+
+    input {
+      max-width: 100%;
+      margin-right: 0px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    a {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width:480px) {
+  .contact {
+    &__item {
+      height: 220px;
+      padding: 110px 0 20px 20px;
+    }
+
+    &__icon {
+      top: 20px;
+      left: 20px;
+    }
+  }
+}
+
+@media (max-width:360px) {
+  .contact {
+    &__item {
+      height: 240px;
     }
   }
 }

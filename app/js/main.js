@@ -1,5 +1,11 @@
 $(function () {
 
+  $('.title-list').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  });
+
+
   $('.header__nav-btn').on('click', function () {
     $('.header__list').toggleClass('header__list--active');
   });
@@ -28,7 +34,15 @@ $(function () {
     asNavFor: '.product__slide-thumbs',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 1281,
+        settings: {
+          draggable: true,
+        }
+      },
+    ],
   });
 
 
@@ -37,6 +51,28 @@ $(function () {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '15px',
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ],
     prevArrow: '<button type="button" class="product__slick-prev"><img src="images/arrow-left.svg" alt=""></button>',
     nextArrow: '<button type="button" class="product__slick-next"><img src="images/arrow-rigth.svg" alt=""></button>'
   });
