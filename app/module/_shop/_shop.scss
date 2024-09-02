@@ -87,6 +87,7 @@
     margin-bottom: 30px;
     display: table;
     position: relative;
+    pointer-events: none;
 
     &::after {
       content: '';
@@ -151,10 +152,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
-
-  .title-list {
-    pointer-events: none;
   }
 
   &__item-img {
@@ -569,24 +566,23 @@
 
     &__form {
       position: relative;
-
-
     }
 
-    .title-list {
+    &__title {
       pointer-events: auto;
       cursor: pointer;
 
       &::before {
         content: url(../images/icon/angle-down-2.svg);
         position: absolute;
-        top: -6px;
+        top: -1px;
         left: -25px;
       }
     }
 
     .active::before {
       transform: rotate(180deg);
+      top: -5px;
     }
   }
 }

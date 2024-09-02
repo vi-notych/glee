@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.title-list').on('click', function () {
+  $('.filter__title').on('click', function () {
     $(this).next().slideToggle();
     $(this).toggleClass('active');
   });

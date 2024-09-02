@@ -313,6 +313,7 @@
     margin-bottom: 30px;
     display: table;
     position: relative;
+    pointer-events: none;
 
     &::after {
       content: '';
@@ -592,18 +593,6 @@
 }
 
 @media (max-width:1024px) {
-  .filter {
-
-    &__form.filter-category,
-    &__form.filter-post {
-      display: none;
-    }
-
-    &__search input {
-      width: 100%;
-    }
-  }
-
   .blog {
     margin: 80px 0;
 
@@ -618,10 +607,42 @@
     &__filter {
       order: -1;
       width: 100%;
-      margin-bottom: 50px;
+      padding: 0px 25px 60px;
       margin-left: 0;
     }
   }
+
+  .filter {
+    &__search input {
+      width: 100%;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+
+    &__form {
+      position: relative;
+    }
+
+    &__title {
+      pointer-events: auto;
+      cursor: pointer;
+
+      &::before {
+        content: url(../images/icon/angle-down-2.svg);
+        position: absolute;
+        top: -1px;
+        left: -25px;
+      }
+    }
+
+    .active::before {
+      transform: rotate(180deg);
+      top: -5px;
+    }
+  }
+
 
   .post {
     &__form {
@@ -681,7 +702,9 @@
 
   .post {
     &__left-img {
+      width: 100%;
       margin-bottom: 30px;
+      margin-right: 0;
     }
 
     &__author-box {

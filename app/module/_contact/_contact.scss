@@ -26,7 +26,7 @@
     line-height: 1.7;
     transition: border-color 0.3s;
 
-    &:hover:not(.address) {
+    &:hover {
       border-color: $gray;
 
       .contact__icon {
@@ -91,7 +91,7 @@
     width: 100%;
     height: 50px;
     border: none;
-    padding: 5px 20px;
+    padding: 15px 20px;
     background-color: $pale-gray;
     margin-bottom: 30px;
   }
@@ -101,9 +101,10 @@
     width: 100%;
     height: 170px;
     border: none;
-    padding: 5px 20px;
+    padding: 15px 20px;
     background-color: $pale-gray;
     margin-bottom: 30px;
+    resize: vertical;
   }
 
 
