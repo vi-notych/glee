@@ -6,9 +6,9 @@ $(function () {
   });
 
 
-  $('.header__nav-btn').on('click', function () {
-    $('.header__list').toggleClass('header__list--active');
-  });
+  // $('.header__checkbox').on('click', function () {
+  //   $('.header__list').toggleClass('header__list--active');
+  // });
 
 
   $('.product__tab').on('click', function (e) {
