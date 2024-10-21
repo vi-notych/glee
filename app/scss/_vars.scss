@@ -16,37 +16,37 @@ $dark-blue: #69828e;
 $crema: #feefe2;
 
 %DMSans {
-  font-family: 'DMSans', sans-serif;
-  font-weight: 700;
+	font-family: 'DMSans', sans-serif;
+	font-weight: 700;
 }
 
 %Rubik {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 500;
 }
 
 %Rubik-r {
-  font-family: 'Rubik-regular', sans-serif;
-  font-weight: 400;
+	font-family: 'Rubik-regular', sans-serif;
+	font-weight: 400;
 }
 
 %Rubik-l {
-  font-family: 'Rubik-light', sans-serif;
-  font-weight: 300;
+	font-family: 'Rubik-light', sans-serif;
+	font-weight: 300;
 }
 
 %checkbox-hidden {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	position: absolute;
 }
 
 @function max($numbers...) {
-  @return m#{a}x(#{$numbers});
+	@return m#{a}x(#{$numbers});
 }
 
 @function min($numbers...) {
-  @return m#{a}x(#{$numbers});
+	@return m#{a}x(#{$numbers});
 }
